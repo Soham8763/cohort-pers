@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet , useLocation} from 'react-router-dom';
 
 const Products = () => {
   const products = [
@@ -8,8 +8,11 @@ const Products = () => {
     { id: 3, name: 'Basic Tee', href: '#', imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg', imageAlt: "Front of men's Basic Tee in charcoal.", price: '$35', color: 'Charcoal' },
     { id: 4, name: 'Basic Tee', href: '#', imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg', imageAlt: "Front of men's Basic Tee in dots.", price: '$35', color: 'Dots' },
   ];
+  const location = useLocation();
 
   return (
+    <>
+  {location.pathname === "/products" && (
     <div className="bg-white">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Customers also purchased</h2>
@@ -39,9 +42,10 @@ const Products = () => {
           ))}
         </div>
       </div>
-      <Outlet/>
     </div>
+      )}
+      <Outlet/>
+      </>
   );
 };
-
 export default Products;
