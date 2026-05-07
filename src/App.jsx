@@ -52,13 +52,11 @@ const App = () => {
         <div>
           <Navbar/>
           <Products/>
-        </div>,
-        children:[
-          {
-            path:'product',
+        </div>
+      },
+      {
+            path:'products/:product',
             element:<Product/>
-          }
-        ]
       },
       {
         path:'/get-started',
