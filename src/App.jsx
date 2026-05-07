@@ -1,5 +1,5 @@
 import React from "react";
-import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import {createBrowserRouter,Outlet,RouterProvider} from "react-router-dom"
 import Home from "./components/Home";
 import Contact from "./components/Contact"
 import About from "./components/About";
@@ -48,15 +48,20 @@ const App = () => {
       },
       {
         path:'/products',
-        element:
+        element:(
         <div>
           <Navbar/>
-          <Products/>
-        </div>,
+          <Outlet/>
+        </div>),
         children:[
           {
-            path:'product',
-            element:<Product/>
+            index:true,
+            // path:'product/',
+            element:<Products/>
+          },
+          {
+            path: 'product', 
+            element: <Product />
           }
         ]
       },
