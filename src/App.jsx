@@ -9,7 +9,11 @@ import Navbar from "./components/Navbar";
 import GetStarted from "./components/GetStarted";
 import LiveDemo from "./components/LiveDemo";
 import ProductId from "./components/ProductId";
+import MatchPage from "./pages/MatchPage";
+import LoginPage from "./components/LoginPage";
 import Product from "./components/Product";
+import BookingPage from "./pages/BookingPage";
+import SuccessPage from "./pages/SuccessPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -18,15 +22,13 @@ const App = () => {
         path:'/',
         element:
         <div>
-          <Navbar/>
-          <Home/>
+          <MatchPage/>
         </div>
       },
       {
         path:'/contact',
         element:
         <div>
-          <Navbar/>
           <Contact/>
         </div>
       },
@@ -34,7 +36,6 @@ const App = () => {
         path:'/about',
         element:
         <div>
-          <Navbar/>
           <About/>
         </div>
       },
@@ -42,7 +43,6 @@ const App = () => {
         path:'/dashboard',
         element:
         <div>
-          <Navbar/>
           <DashBoard/>
         </div>
       },
@@ -50,7 +50,6 @@ const App = () => {
         path:'/products',
         element:
         <div>
-          <Navbar/>
           <Products/>
         </div>,
         children:[
@@ -64,7 +63,6 @@ const App = () => {
         path:'/get-started',
         element:
         <div>
-          <Navbar/>
           <GetStarted/>
         </div>
       },
@@ -72,7 +70,6 @@ const App = () => {
         path:'/live-demo',
         element:
         <div>
-          <Navbar/>
           <LiveDemo/>
         </div>
       },
@@ -80,10 +77,17 @@ const App = () => {
         path:'/product-id/:id',
         element:
         <div>
-          <Navbar/>
           <ProductId/>
         </div>
       },
+      {
+        path:'/bookings',
+        element:<BookingPage/>
+      },
+      {
+        path:'/success',
+        element:<SuccessPage/>
+      }
     ]
   );
   return (
