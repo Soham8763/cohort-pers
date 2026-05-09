@@ -34,6 +34,7 @@ const BookingPage = () => {
         //validation
         if(!selectedSeat || !paymentMethod){
             alert("Please select a seat and a payment method")
+            return
         }
 
         navigate("/success",{
