@@ -40,11 +40,10 @@ const BookingPage = () => {
             state:{
                 match,
                 selectedSeat,
-                paymentMethod
             }
         })
     }
-    
+
   return (
     <div className='min-h-screen bg-primary text-white p-10'>
         {/* Match Details */}
@@ -89,7 +88,6 @@ const BookingPage = () => {
             paymentMethod={paymentMethod}
             setPaymentMethod={setPaymentMethod}
         />
-
         {/* Booking summary */}
         <div className='bg-secondary p-5 rouned-xl mt-10'>
             <h2 className='text-xl font-semibold'>
