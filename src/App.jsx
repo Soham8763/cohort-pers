@@ -14,6 +14,7 @@ import LoginPage from "./components/LoginPage";
 import Product from "./components/Product";
 import BookingPage from "./pages/BookingPage";
 import SuccessPage from "./pages/SuccessPage";
+import MovieBookingPage from "./pages/MovieBookingPage";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -87,6 +88,10 @@ const App = () => {
       {
         path:'/success',
         element:<SuccessPage/>
+      },
+      {
+        path:'/movies',
+        element:<MovieBookingPage/>
       }
     ]
   );
