@@ -15,6 +15,7 @@ import Product from "./components/Product";
 import BookingPage from "./pages/BookingPage";
 import SuccessPage from "./pages/SuccessPage";
 import MovieBookingPage from "./pages/MovieBookingPage";
+import BookingProvider from "./context/BookingContext";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -96,9 +97,9 @@ const App = () => {
     ]
   );
   return (
-    <>
+    <BookingProvider>
       <RouterProvider router={router} />
-    </>
+    </BookingProvider>
   );
 };
 

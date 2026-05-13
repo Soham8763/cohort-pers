@@ -1,11 +1,15 @@
 import React from 'react'
+import { useBooking } from '../context/BookingContext'
 
-const PaymentMethod = ({paymentMethod,setPaymentMethod}) => {
+const PaymentMethod = () => {
     const methods = [
         "UPI",
         "Credit Card",
         "Debit Card"
     ]
+
+    const {paymentMethod,setPaymentMethod} = useBooking();
+
   return (
     <div className='space-y-4'>
         {methods.map((method,index)=>(
