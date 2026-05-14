@@ -16,6 +16,8 @@ import BookingPage from "./pages/BookingPage";
 import SuccessPage from "./pages/SuccessPage";
 import MovieBookingPage from "./pages/MovieBookingPage";
 import BookingProvider from "./context/BookingContext";
+import Ref from "./components/Ref";
+import Memoization from "./components/Memoization";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -93,6 +95,14 @@ const App = () => {
       {
         path:'/movies',
         element:<MovieBookingPage/>
+      },
+      {
+        path:'/reference',
+        element:<Ref/>
+      },
+      {
+        path:'/memo',
+        element:<Memoization/>
       }
     ]
   );
