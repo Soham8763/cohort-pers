@@ -56,13 +56,11 @@ const App = () => {
         element:
         <div>
           <Products/>
-        </div>,
-        children:[
-          {
-            path:'product',
+        </div>
+      },
+      {
+            path:'products/:product',
             element:<Product/>
-          }
-        ]
       },
       {
         path:'/get-started',
