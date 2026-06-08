@@ -57,13 +57,13 @@ const App = () => {
         <div>
           <Products/>
         </div>,
-        children:[
-          {
-            path:'product',
-            element:<Product/>
-          }
-        ]
       },
+          {
+            path:'products/:product',
+            element:<Product/>
+          },
+        
+      
       {
         path:'/get-started',
         element:
@@ -117,5 +117,4 @@ const App = () => {
     </BookingProvider>
   );
 };
-
 export default App;
